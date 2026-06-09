@@ -23,17 +23,17 @@ const MetricCard = ({ label, value, unit, color, trend }: any) => (
 );
 
 const PatientRow = ({ patient, onPress }: { patient: Patient; onPress: () => void }) => {
-  const statusColor = patient.status === 'critical' ? '#EF4444' : patient.status === 'warning' ? '#F59E0B' : '#22C55E';
+  const statusColor = patient.limiteEsforcoCritico > 50 ? '#EF4444' : '#22C55E';
   return (
     <TouchableOpacity style={styles.patientRow} onPress={onPress} activeOpacity={0.75}>
       <View style={[styles.statusIndicator, { backgroundColor: statusColor }]} />
       <View style={styles.patientInfo}>
-        <Text style={styles.patientName}>{patient.name}</Text>
-        <Text style={styles.patientMeta}>ID {patient.id} · {patient.condition}</Text>
+        <Text style={styles.patientName}>{patient.nome}</Text>
+        <Text style={styles.patientMeta}>ID {patient.id} · CPF: {patient.cpf}</Text>
       </View>
       <View style={styles.patientRight}>
         <Text style={[styles.patientStatus, { color: statusColor }]}>
-          {patient.status === 'critical' ? 'CRÍTICO' : patient.status === 'warning' ? 'ATENÇÃO' : 'ESTÁVEL'}
+          {patient.limiteEsforcoCritico > 50 ? 'ALTO RISCO' : 'ESTÁVEL'}
         </Text>
         <Text style={styles.chevron}>›</Text>
       </View>
