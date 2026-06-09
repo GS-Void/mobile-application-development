@@ -123,7 +123,7 @@ export function WelcomeScreen({ navigation }: any) {
                 </LinearGradient>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.secondaryButton} activeOpacity={0.75}>
+              <TouchableOpacity style={styles.secondaryButton} activeOpacity={0.75} onPress={() => navigation.navigate('Dashboard')}>
                 <Text style={styles.playIcon}>▶</Text>
                 <Text style={styles.secondaryButtonText}>Ver Demonstração</Text>
               </TouchableOpacity>
