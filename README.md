@@ -2,6 +2,8 @@
 
 Projeto acadêmico de monitoramento biométrico com sensores IoT, inspirado nos protocolos da ISS.
 
+
+# Link do video: https://youtu.be/C7v-hCRvlDU
 ---
 
 ## Setup do Projeto
