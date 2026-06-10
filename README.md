@@ -92,8 +92,8 @@ Essa separação segue o princípio de **Single Responsibility**: cada pasta tem
 
 ### Autenticação (authService.ts)
 - `POST /auth/login` → salva JWT com AsyncStorage
-- Interceptor Axios injeta `Authorization: Bearer <token>` automaticamente
-- `logout()` remove token e redireciona para Welcome
+- Interceptor Axios injeta `Authorization: Bearer <token>` automaticamente 
+- `logout()` remove token  e redireciona para Welcome
 
 ### CRUD de Pacientes (telemetryService.ts)
 - `GET /patients` — lista todos
