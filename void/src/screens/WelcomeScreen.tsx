@@ -23,7 +23,7 @@ export function WelcomeScreen({ navigation }: any) {
   const pulseAnim = useRef(new Animated.Value(1)).current;
 
   useEffect(() => {
-    // Staggered entrance animation
+
     Animated.sequence([
       Animated.timing(badgeOpacity, {
         toValue: 1, duration: 600, useNativeDriver: true,
@@ -37,7 +37,6 @@ export function WelcomeScreen({ navigation }: any) {
       Animated.timing(buttonsOpacity, { toValue: 1, duration: 500, useNativeDriver: true }),
     ]).start();
 
-    // Pulse no dot do badge
     Animated.loop(
       Animated.sequence([
         Animated.timing(pulseAnim, { toValue: 1.4, duration: 900, useNativeDriver: true }),
